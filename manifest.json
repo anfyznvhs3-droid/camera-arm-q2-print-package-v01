@@ -1,0 +1,73 @@
+{
+  "schema": "Q2-REPRESENTATIVE-JOINT-PRINT-PACKAGE.v01",
+  "status": "TEST_PACKAGE_NOT_PRODUCTION",
+  "material": "PETG-CF",
+  "printer": "Bambu Lab FDM (hardened nozzle required)",
+  "settingRule": "Do NOT transfer PLA/P1S source settings; use PETG-CF qualified profile",
+  "parts": [
+    {
+      "file": "stl/B1-C2-clearance-v02.stl",
+      "role": "B1 link with ear clearance",
+      "sourceIpt": "B1-C2-clearance-v02.ipt",
+      "clearance": "ear OD R16->R15.7 (0.3mm radial vs A1 housing)",
+      "clearanceBasis": "USER EXPERIENCE VALUE 0.3mm (2026-11-09), verify with R1-R5 joint test",
+      "sha256": "26f3a2e2cf33d02d942d4da4915d3bbe4aaca3c3099b33f4fdcf29ab502d107a"
+    },
+    {
+      "file": "stl/A1-L90-front-v01.stl",
+      "role": "A1 rotor + brake housing",
+      "sourceIpt": "A1-L90-front-v01.ipt",
+      "clearance": "housing plane vs B1 ear",
+      "clearanceBasis": "as-designed",
+      "sha256": "c9f8c23dcc9d7b9189983bbb47cd868f5ebdc0ffc505cadb512f45ff313444e5"
+    },
+    {
+      "file": "stl/pitch-pin-D10-M10x1p5-v02.stl",
+      "role": "D10 fixed pin (Q2)",
+      "sourceIpt": "pitch-pin-D10-M10x1p5-v02.ipt",
+      "clearance": "pin R5.0 vs bore R5.2 = 0.2mm radial",
+      "clearanceBasis": "as-designed",
+      "sha256": "0a875a9092000186f18dbfcb7b49d5af65c8ac32b8f5b6041388ae5c052fc9eb"
+    },
+    {
+      "file": "stl/Q2-Q3-M10x1p5-cap-v01.stl",
+      "role": "M10x1.5 capture cap (Q2)",
+      "sourceIpt": "Q2-Q3-M10x1p5-cap-v01.ipt",
+      "clearance": "as-designed",
+      "sha256": "06b79bc20305906a9bf1f2a3f921ca981d570d520e2ad03e7e1bc705b131d45d"
+    },
+    {
+      "file": "stl/brake-shoe-R5-v01.stl",
+      "role": "Q2 brake shoe (friction lock)",
+      "sourceIpt": "brake-shoe-R5-v01.ipt",
+      "clearance": "unchanged - lock mechanism preserved",
+      "sha256": "43b326fcad21db7b71c9b0232a2d0f653ae680b1ce99fee1853f5d3a667c94eb"
+    },
+    {
+      "file": "stl/brake-nut-D8x1p5-v01.stl",
+      "role": "cartridge nut",
+      "sourceIpt": "brake-nut-D8x1p5-v01.ipt",
+      "clearance": "as-designed",
+      "sha256": "5691698c5de0504aebb65dd456497f20b04ba3b10fddb8d914b4f3b6e0b861a4"
+    },
+    {
+      "file": "stl/brake-knob-D8x1p5-v03.stl",
+      "role": "lock knob",
+      "sourceIpt": "brake-knob-D8x1p5-v03.ipt",
+      "clearance": "as-designed",
+      "sha256": "50c263bf0cc3f984dbfd8974d7717edb54568d50a709eda27d8933035ab4c07c"
+    }
+  ],
+  "observationsAfterPrint": [
+    "R1 pin insertion through ears+bore",
+    "R2 free rotation range",
+    "R3 measured tangency gap (target >=0.4mm after print)",
+    "R4 lock engagement state",
+    "R5 axial stack seating"
+  ],
+  "openItems": [
+    "ear clearance adopted as 0.3mm per user experience - verify on printed joint test",
+    "physical/thread/preload/thermal qualification still open",
+    "FFC protection deferred by user"
+  ]
+}
